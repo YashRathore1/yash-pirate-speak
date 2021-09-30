@@ -13,15 +13,18 @@ console.log("error occcured", error)
 alert("Something Wrong! Please try again later.")
 }   
 
-function clickHandler() {
-    // var inputText = textArea.value;
-
-    fetch(getTranslationURL(textArea.value))
+function clickHandler() {   
+   
+    var inputText = textArea.value;
+    
+    console.log(getTranslationURL(inputText))
+    fetch(getTranslationURL(inputText))
     .then(response => response.json())
      
-    .then(json => {
-        var translatedText = json.contents.translated;
-        outputDiv.innertext = translatedText;
+    .then((json) => {
+        let translatedText = json.contents.translated;
+       
+        outputDiv.innerText = translatedText;
     })
     .catch(errorHandler)
 };
