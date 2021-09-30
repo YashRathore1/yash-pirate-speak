@@ -1,2 +1,4 @@
 # yash-Smurf-Translator
- Convert from English to Smurf Speak
+ 
+ 
+ This app will convert your text into Smurf Speak.
